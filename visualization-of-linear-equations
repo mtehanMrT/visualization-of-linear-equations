@@ -1,0 +1,25 @@
+import numpy as np 
+import matplotlib.pyplot as plt
+
+a=float(input("Give me the general equation of a line, and I'll draw it for you. Assign coefficient values to the x variable one by one."))
+b=float(input("now for y?"))
+
+
+x= np.linspace(-10,10,900)
+
+if a != 0:
+    y = -a/b * x
+
+plt.plot(x,y, label = f"{a}x + {b}y =0")
+
+plt.title("Visualizing the equation formula")
+plt.xlabel('x')
+plt.ylabel('y')
+
+plt.axhline(0, color='black', linewidth=1)
+plt.axvline(0, color='black', linewidth=1)
+
+
+plt.grid(True)
+plt.legend()
+plt.show()
